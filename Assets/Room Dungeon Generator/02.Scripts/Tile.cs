@@ -1,8 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using ooparts.dungen;
 
-public class Tile : MonoBehaviour
+namespace ooparts.dungen
 {
-	public IntVector2 Coordinates;
+	public class Tile : MonoBehaviour
+	{
+		public IntVector2 Coordinates;
 
+		public void Start()
+		{
+			transform.localScale *= RoomMapManager.TileSize;
+		}
+	}
 }
